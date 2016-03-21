@@ -1,3 +1,5 @@
+//CALCULADORA LIMITADA V 1.0.0.0
+
 
 import javax.swing.JOptionPane;
 import java.util.ArrayList;
@@ -33,7 +35,6 @@ public Calculadora()
 		   if((strToken.charAt(i)!='+'&& strToken.charAt(i)!='-'))
 		   {
 			   aux[i]=Integer.parseInt(Character.toString(strToken.charAt(i)));
-			   operador1=aux[i];
 		   } 
 		   else {
 		   for(int j=0;j<i;j++)
@@ -49,28 +50,23 @@ public Calculadora()
 			   arreglo.add(Character.toString(auxi));
 			   operador1=0;	     
 		   }
-		   else
-		   {arreglo.add(Double.toString(aux[i-1]));}
-		   //VER!
 		   		   }
-		  
-			   
-		   //arreglo.add(Character.toString(strToken.charAt(i)));		   
+		  		 	   
 	   }
+	   arreglo.add(Double.toString(aux[strToken.length()-1]));
 	   //for(int i=0;i<2;i++)
 	   
 		   //System.out.println(arreglo.get(0));
-	   
-	   
-	   for(int k=0; k<=arreglo.size();k++)
+	      
+	   for(int k=0; k<arreglo.size()-1;k++)
 	   {
-		   if(arreglo.get(k)=="+")
+		   if(arreglo.get(k+1).equals("+"))
 		   {
-			   Resultado=Resultado+Double.parseDouble(arreglo.get(k-1))+Double.parseDouble(arreglo.get(k+1));
+			   Resultado=Resultado+Double.parseDouble(arreglo.get(k))+Double.parseDouble(arreglo.get(k+2));
 		   }
-		   if(arreglo.get(k)=="-")
+		   if(arreglo.get(k+1).equals("-"))
 		   {
-			   Resultado=Resultado-(Double.parseDouble(arreglo.get(k-1))-Double.parseDouble(arreglo.get(k+1)));
+			   Resultado=(Double.parseDouble(arreglo.get(k))-Double.parseDouble(arreglo.get(k+2)))-Resultado;
 		   }
 	   }
 	   //System.out.println("El tamaño del arreglo es: "+arreglo.size());
