@@ -10,7 +10,7 @@ Zimmel, Ezequiel, 33382573
 * xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 * Calculadora.java - Version 2016.1.0.0
 *
-* Autores: Armando Gaspar, Ceballos Matias, Zimmel Ezeqiel
+* Autores: Armando Gaspar, Ceballos Matias, Zimmel Ezequiel
 *
 * Esta aplicación tiene la funcion de una calculadora simple, con suma,
 * resta, multiplicacion , division y porcentaje. Pudiendo editar la caja de  
