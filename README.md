@@ -4,4 +4,31 @@ INTEGRANTES
 
 Armando, Gaspar, 38333248
 Ceballos, Matias, 35557211
-Zimmel, Ezequiel, 33382572
+Zimmel, Ezequiel, 33382573
+
+*
+* -------------------------------------------------------------------------------
+* Calculadora.java - Version 2016.1.0.0
+*
+* Autores: Armando Gaspar, Ceballos Matias, Zimmel Ezeqiel
+*
+* Esta aplicación tiene la funcion de una calculadora simple, con suma,
+* resta, multiplicacion , division y porcentaje. Pudiendo editar la caja de  
+* texto, y devolviendo el resultado una vez precionado "Enter".
+*
+* 
+* Compilado: javac AppletCalculadora.java
+* ------------------------------------------------------------------------------
+*
+* ------------------------------------------------------------------------------
+* FUNCIONALIDADES - Version 2016.1.0.0
+*
+* SUMA Y RESTA: NUMA + NUMB = NUMC / NUMA>0 y NUMB>0; NUMA>NUMB
+*		     	     -NUMC / NUMA<0 y NUMB<0; NUMA<NUMB
+*
+* Referencia:  
+* 	     15+2=17
+*	     15-2=13
+*	     2-15=-13
+*	    -15-2=-17
+* ------------------------------------------------------------------------------
