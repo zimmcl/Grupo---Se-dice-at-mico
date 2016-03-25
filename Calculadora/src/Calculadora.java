@@ -1,83 +1,125 @@
-//CALCULADORA LIMITADA V 1.0.0.0
+/*
+ * ------------------------------------------------------------------------------
+ * Calculadora.java - Version 2016.1.0.0
+ *
+ * Autores: Armando Gaspar, Ceballos Matias, Zimmel Ezeqiel
+ *
+ * Esta aplicación tiene la funcion de una calculadora simple, con suma,
+ * resta, multiplicacion , division y porcentaje. Pudiendo editar la caja de  
+ * texto, y devolviendo el resultado una vez precionado "Enter".
+ *
+ * 
+ * Compilado: javac AppletCalculadora.java
+ * ------------------------------------------------------------------------------
+*/
 
 
-import javax.swing.JOptionPane;
 import java.util.ArrayList;
-import java.util.Scanner;
-//import java.math;
-//import java.lang.Object;
+import javax.swing.JOptionPane;
+
 
 public class Calculadora {
-	private static  ArrayList<String> arreglo;
-	private static Scanner sc;
-	private static String strToken; 
-	
 
-public Calculadora()
-{
+	private static  ArrayList<String> arreglo;
+	private static  ArrayList<Double> arreglo2;
+	private static  ArrayList<Double> arreglo3;
+	private static  ArrayList<String> arreglo4;
+	private static String strToken;
 	
-}
-   public static void suma()
-   {
-	   double Resultado=0;
-	   char auxi='0';
-	   double operador1=0;
-	   //double operador2=0;
-	   double[] aux = new double[100];
-	   double[] aux2 = new double [100];
-	   arreglo = new ArrayList<String>();
-	   sc = new Scanner(System.in);
-	   System.out.println(" INGRESE LA OPERACION: ");
-	   strToken = sc.next();
-	   for(int i=0;i<=strToken.length()-1;i++)
-	   {	
-		     
-		   if((strToken.charAt(i)!='+'&& strToken.charAt(i)!='-'))
+//--------------------------OPERACION SUMA Y RESTA---------------------------------------------------
+public static void sumaresta()
+{
+	char aux=' ';
+	double Resultado=0;
+	double operador=0;
+	arreglo = new ArrayList<String>();
+	arreglo2 = new ArrayList<Double>();
+	arreglo3 = new ArrayList<Double>();
+	arreglo4 = new ArrayList<String>();
+	
+	//-INGRESA OPERACION POR TECLADO-
+	strToken=JOptionPane.showInputDialog(null,"INGRESE LA OPERACION: ","Ingrese Operacion");
+	//-VERIFICO OPERADOR "-" EN EL INICIO DE LA OPERACION
+	if(strToken.charAt(0)=='-')
+	{
+		arreglo.add("0");
+	}
+	//-ALMACENO ELEMENTOS EN ARREGLO EXTRAIDOS DE LA CADENA "STRTOKEN"-
+	for(int i=0;i<strToken.length();i++)
+	{
+		arreglo.add(Character.toString(strToken.charAt(i)));
+	}
+	arreglo.add("Fin");
+	/*-VERIFICA EXISTENCIA DE OPERADOR "+" O "-". LUEGO AGRUPO OPERANDOS. Ejemplo: strToken->[1,2,+,3,1] -> arreglo->[12,+,31]
+	   SE UTILZAN ARREGLOS AUXILIARES PARA TAL FIN-*/
+	for(int i=0;i<arreglo.size();i++)
+	{
+		if(arreglo.get(i).equals("+") || arreglo.get(i).equals("-") || arreglo.get(i).equals("Fin"))
 		   {
-			   aux[i]=Integer.parseInt(Character.toString(strToken.charAt(i)));
+			for(int j=0;j<arreglo2.size();j++)
+			{
+			   arreglo3.add(j,Double.parseDouble(arreglo.get(i-j-1)));
+			   arreglo3.add(j,(arreglo3.get(j)*Math.pow(10,j+1))/10);
+			   operador=operador+arreglo3.get(j);
+			   aux=arreglo.get(i).charAt(0);
+			}
+			
+			if(i<=arreglo.size())
+			   {
+				   arreglo4.add(Double.toString(operador));
+				   arreglo4.add(Character.toString(aux));
+				   operador=0;
+				   arreglo2.clear();
+			   }
 		   } 
 		   else {
-		   for(int j=0;j<i;j++)
-		   {
-			   aux2[j]=aux[i-j-1];
-			   aux2[j]=(aux2[j]*Math.pow(10,j+1))/10;
-			   operador1=operador1+aux2[j];
-			   auxi=strToken.charAt(i);
+			   arreglo2.add((Double.parseDouble(arreglo.get(i))));
 		   }
-		   if(i<strToken.length()-1)
-		   {
-			   arreglo.add(Double.toString(operador1));
-			   arreglo.add(Character.toString(auxi));
-			   operador1=0;	     
-		   }
-		   		   }
-		  		 	   
-	   }
-	   arreglo.add(Double.toString(aux[strToken.length()-1]));
-	   //for(int i=0;i<2;i++)
-	   
-		   //System.out.println(arreglo.get(0));
-	      
-	   for(int k=0; k<arreglo.size()-1;k++)
+		   arreglo3.clear();
+	}
+	
+	//-ELIMINO ULTIMO ELEMENTO DEFINIDO COMO "F"-
+	arreglo4.remove(arreglo4.size()-1);
+	arreglo3.add(Double.parseDouble(arreglo4.get(0)));
+	//-RESUELVO OPERACION-
+	for(int k=0; k<arreglo4.size()-1;k++)
 	   {
-		   if(arreglo.get(k+1).equals("+"))
+		   if(arreglo4.get(k+1).equals("+"))
 		   {
-			   Resultado=Resultado+Double.parseDouble(arreglo.get(k))+Double.parseDouble(arreglo.get(k+2));
+			   Resultado=(arreglo3.get(0))+Double.parseDouble(arreglo4.get(k+2));
+			   arreglo3.add(0,Resultado);
 		   }
-		   if(arreglo.get(k+1).equals("-"))
+		   if(arreglo4.get(k+1).equals("-"))
 		   {
-			   Resultado=(Double.parseDouble(arreglo.get(k))-Double.parseDouble(arreglo.get(k+2)))-Resultado;
+			   Resultado=(arreglo3.get(0)-Double.parseDouble(arreglo4.get(k+2)));
+			   arreglo3.add(0,Resultado);
 		   }
 	   }
-	   //System.out.println("El tamaño del arreglo es: "+arreglo.size());
-	   
-	   //System.out.println(operador1);
-	   System.out.println(Resultado);
-   }
-  
-   
-   public static void main( String args[] )
-   { 
-      suma();
-   } 
+	JOptionPane.showMessageDialog(null, "OPERACION: "+strToken+" = "+Resultado);
 }
+
+//---------------------------------------MENU--------------------------------------------------------
+public static void Menu()
+{
+	int opcion=0;
+	do
+	{
+	opcion = JOptionPane.showOptionDialog(null,"SELECCIONE OPERACION","MENU",JOptionPane.OK_CANCEL_OPTION,JOptionPane.QUESTION_MESSAGE,null,new Object[] {"Suma y Resta","Salir"},"Salir");
+	switch(opcion){
+				case 0: sumaresta();
+				break;
+				case 1: JOptionPane.showMessageDialog(null,"Gracias por probar Calculadora V 2016.1.0.0");
+				break;
+				  }
+	}while(opcion!=1);
+}
+
+public static void main( String args[] )
+{ 
+   Menu();
+   System.exit(0);
+} 
+
+}
+
+
