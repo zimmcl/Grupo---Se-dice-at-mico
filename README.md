@@ -7,7 +7,7 @@ Ceballos, Matias, 35557211
 Zimmel, Ezequiel, 33382573
 
 *
-* -------------------------------------------------------------------------------
+* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 * Calculadora.java - Version 2016.1.0.0
 *
 * Autores: Armando Gaspar, Ceballos Matias, Zimmel Ezeqiel
@@ -18,9 +18,9 @@ Zimmel, Ezequiel, 33382573
 *
 * 
 * Compilado: javac AppletCalculadora.java
-* ------------------------------------------------------------------------------
+* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 *
-* ------------------------------------------------------------------------------
+* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 * FUNCIONALIDADES - Version 2016.1.0.0
 *
 * SUMA Y RESTA: NUMA + NUMB = NUMC / NUMA>0 y NUMB>0; NUMA>NUMB
@@ -31,4 +31,4 @@ Zimmel, Ezequiel, 33382573
 *	     15-2=13
 *	     2-15=-13
 *	    -15-2=-17
-* ------------------------------------------------------------------------------
+* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
