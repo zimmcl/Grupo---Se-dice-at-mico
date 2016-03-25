@@ -21,7 +21,7 @@ Zimmel, Ezequiel, 33382573
 * xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 *
 * xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-* FUNCIONALIDADES - Version 2016.1.0.0
+* FUNCIONALIDADES - Version 2016.1.2.0
 *
 * SUMA Y RESTA: NUMA + NUMB = NUMC / NUMA>0 y NUMB>0; NUMA>NUMB
 *		     	     -NUMC / NUMA<0 y NUMB<0; NUMA<NUMB
@@ -41,5 +41,13 @@ Zimmel, Ezequiel, 33382573
 *	  -15*-2=30
 *	  -15*2=-30
 *	   15*-2=-30
+*
+*------------------------------------------------------------------------------
+*
+** PORCENTAJE: NUMA%NUMB = NUNC 
+*			      
+* Ejemplo:
+*	   20%200=40
+*	   5%100=5
 *
 * xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
