@@ -8,7 +8,7 @@ Zimmel, Ezequiel, 33382573
 
 *
 * xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-* Calculadora.java - Version 2016.1.0.0
+* Calculadora.java - Version 2016.1.1.0
 *
 * Autores: Armando Gaspar, Ceballos Matias, Zimmel Ezequiel
 *
@@ -31,4 +31,15 @@ Zimmel, Ezequiel, 33382573
 *	     15-2=13
 *	     2-15=-13
 *	    -15-2=-17
+* ------------------------------------------------------------------------------
+*
+** MULTIPLICACION: NUMA*NUMB = NUNC / NUMA>0 y NUMB>0; NUMA<0 y NUMB<0
+*			      -NUMC / NUMA<0 y NUMB>0; NUMA>0 y NUMB<0
+*
+* Ejemplo:
+*	   15*2=30
+*	  -15*-2=30
+*	  -15*2=-30
+*	   15*-2=-30
+*
 * xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
