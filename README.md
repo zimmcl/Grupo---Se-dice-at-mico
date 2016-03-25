@@ -8,7 +8,7 @@ Zimmel, Ezequiel, 33382573
 
 *
 * xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-* Calculadora.java - Version 2016.1.1.0
+* Calculadora.java - Version 2016.1.2.0
 *
 * Autores: Armando Gaspar, Ceballos Matias, Zimmel Ezequiel
 *
@@ -42,7 +42,7 @@ Zimmel, Ezequiel, 33382573
 *	  -15*2=-30
 *	   15*-2=-30
 *
-*------------------------------------------------------------------------------
+* ------------------------------------------------------------------------------
 *
 ** PORCENTAJE: NUMA%NUMB = NUNC 
 *			      
