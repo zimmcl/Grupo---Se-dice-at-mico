@@ -1,6 +1,6 @@
 # Grupo-Se_dice_atomico
 
-INTEGRANTES
+INTEGRANTESp
 
 Armando, Gaspar, 38333248
 Ceballos, Matias, 35557211
