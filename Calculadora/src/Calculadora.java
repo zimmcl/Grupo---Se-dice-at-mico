@@ -17,16 +17,18 @@ public static void Menu()
 	int opcion=0;
 	do
 	{
-	opcion = JOptionPane.showOptionDialog(null,"SELECCIONE OPERACION","MENU",JOptionPane.OK_CANCEL_OPTION,JOptionPane.QUESTION_MESSAGE,null,new Object[] {"Suma y Resta","Multiplicación","Salir"},"Salir");
+	opcion = JOptionPane.showOptionDialog(null,"SELECCIONE OPERACION","MENU",JOptionPane.OK_CANCEL_OPTION,JOptionPane.QUESTION_MESSAGE,null,new Object[] {"Suma y Resta","Multiplicación","Porcentaje","Salir"},"Salir");
 	switch(opcion){
 				case 0: SumaResta.sumarrestar();
 				break;
 				case 1: Multiplicacion.multiplicar();
 				break;
-				case 2: JOptionPane.showMessageDialog(null,"Gracias por probar Calculadora");
+				case 2: Porcentaje.porcentaje();
+				break;
+				case 3: JOptionPane.showMessageDialog(null,"Gracias por probar Calculadora");
 				break;
 				  }
-	}while(opcion!=2);
+	}while(opcion!=3);
 }
 
 public static void main( String args[] )
