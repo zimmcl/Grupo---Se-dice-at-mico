@@ -2,7 +2,7 @@
  * Calculadora.java*
  *
  * Autores: Armando Gaspar, 
- * 			Ceballos Matias, 
+ * 			Ceballos Matias Lionel, 
  * 			Zimmel Ezequiel
  * ------------------------------------------------------------------------------
 */
