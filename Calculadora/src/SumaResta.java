@@ -9,11 +9,13 @@ public class SumaResta {
 	private static  ArrayList<Double> arreglo3;
 	private static  ArrayList<String> arreglo4;
 	private static String strToken;
+	private static double Resultado;
 	
+	public SumaResta(){ sumarrestar();}
 	public static void sumarrestar()
 	{
 		char aux=' ';
-		double Resultado=0;
+		Resultado=0;
 		double operador=0;
 		arreglo = new ArrayList<String>();
 		arreglo2 = new ArrayList<Double>();
@@ -84,5 +86,9 @@ public class SumaResta {
 			   }
 		   }
 		JOptionPane.showMessageDialog(null, "OPERACION: "+strToken+" = "+Resultado);
+	}
+	public static double getRes(){
+		return Resultado;
+	}
 	}
 }
