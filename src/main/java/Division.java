@@ -25,12 +25,16 @@ public class Division {
 		strToken=JOptionPane.showInputDialog(null,"INGRESE LA OPERACION: ","Ingrese la Operacion");	
 		/*-VERIFICO OPERADOR "-" EN EL INICIO DE LA OPERACION.
 		   ALMACENO ELEMENTOS EN ARREGLO EXTRAIDOS DE LA CADENA "STRTOKEN"-*/
+		boolean negativo= false;
 		for(int i=0;i<strToken.length();i++)
 		{
 			if(strToken.charAt(i)=='-')
-			{
-				arreglo.add("-1");
-				i++;
+			{	
+				if(negativo){negativo=false;}
+				else{if(!negativo){negativo=true;}
+				}
+				//arreglo.add("-1");
+				//i++;
 			}else{
 			arreglo.add(Character.toString(strToken.charAt(i)));}
 		}
@@ -53,7 +57,7 @@ public class Division {
 				   arreglo3.add(j,(arreglo3.get(j)*Math.pow(10,j+1))/10);
 				   if(arreglo.get(j)=="-1")
 				   {
-				   operador=(Math.abs(operador)+Math.abs(arreglo3.get(j)))*-1;
+				   operador=(Math.abs(operador)+Math.abs(arreglo3.get(j)))*(-1);
 				   }
 				   else
 				   {operador=Math.abs(operador)+Math.abs(arreglo3.get(j));}
@@ -95,7 +99,12 @@ public class Division {
 		if(arreglo3.size()==1)
 		{	
 		JOptionPane.showMessageDialog(null, "OPERACION: "+strToken+" = "+arreglo3.get(0));}
-		else JOptionPane.showMessageDialog(null, "OPERACION: "+strToken+" = "+Resultado);
+		else if (negativo==true){
+			Resultado *= -1;
+		}
+			JOptionPane.showMessageDialog(null, "OPERACION: "+strToken+" = "+Resultado);
+			
+		
 	}
 }
 
